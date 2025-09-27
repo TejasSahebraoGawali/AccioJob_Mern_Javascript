@@ -56,3 +56,6 @@ primesInRange(13);
 // Question 3:
 
 // Problem : Print Hollow Diamond Pattern
+//  Loops
+
+ 

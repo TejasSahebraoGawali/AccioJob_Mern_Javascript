@@ -14,7 +14,7 @@ console.log(arr);
 arr = [1, 5, 6, 2, 1, 10];
 arr[1] = 7;
 console.log({ arr });
-
+ 
 /* ================== Methods in Arrays ================== */
 /* Insertion in Arrays */
 
