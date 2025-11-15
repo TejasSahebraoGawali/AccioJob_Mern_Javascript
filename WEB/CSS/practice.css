@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;  /* ✅ Important */
+    margin: 20px auto;
+}
+
+.middle td,
+.middle th {
+    border: 1px solid black;   /* ✅ Required */
+    padding: 1px;              /* ✅ Required */
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}

@@ -1,0 +1,43 @@
+#parents {
+    border: 1px solid red;
+    /* padding: 20px; */
+    /* width: 50%; */
+    /* margin: 100px; */
+    position: absolute;
+}
+
+#one {
+    background-color: cyan;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#two {
+    background-color: magenta;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    position: fixed;
+    right: 10px;
+}
+
+#three {
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+#four {
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+}

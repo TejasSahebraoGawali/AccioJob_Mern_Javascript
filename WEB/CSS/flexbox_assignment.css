@@ -1,0 +1,24 @@
+body,
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.flex-container {
+    background-color: black;
+    color: white;
+    display: flex;               /* ✅ Enable flexbox */
+    justify-content: space-between; /* ✅ Push h2 left and menu right */
+    align-items: center;         /* ✅ Vertically center items */
+    padding: 15px 20px;          /* Space inside navbar */
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;               /* ✅ Menu items in a row */
+    gap: 20px;                   /* Spacing between items */
+}
+
+.nav-menu li {
+    cursor: pointer;
+}
