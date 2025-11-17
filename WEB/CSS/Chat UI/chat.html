@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat UI Clone</title>
+    <link rel="stylesheet" href="chat.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=student" alt="User" />
+                <h3>Tejas Gawali</h3>
+            </div>
+
+            <div class="contacts">
+                <p>💬 John Doe</p>
+                <p>💬 Alice</p>
+                <p>💬 Rahul</p>
+            </div>
+        </aside>
+
+        <!-- Chat Window -->
+        <main class="chat-window">
+            <header class="chat-header">
+                <h2>John Doe</h2>
+            </header>
+
+            <!-- <div class="inner-window"> -->
+                <div class="messages">
+                    <div class="message incoming">
+                        <div class="bubble incoming-bubble">Hey! How are you?</div>
+                    </div>
+
+                    <div class="message outgoing">
+                        <div class="bubble outgoing-bubble">I’m good, thanks! You?</div>
+                    </div>
+
+                    <div class="message incoming">
+                        <div class="bubble incoming-bubble">Doing great! Working on our project 😊</div>
+                    </div>
+                </div>
+                <footer class="chat-input">
+                    <input type="text" placeholder="Type a message..." id="search-bar">
+                    <button id="btn">Send</button>
+                </footer>
+            </div>
+        </main>
+
+    </div>
+</body>
+
+</html>

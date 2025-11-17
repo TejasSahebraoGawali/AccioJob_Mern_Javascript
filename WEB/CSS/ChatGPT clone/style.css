@@ -1,0 +1,116 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid gray;
+    gap: 20px;
+    width: 220px;
+    height: 100vh;
+    background-color: #181818;
+}
+
+.logo {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #212121;
+    width: 100%;
+}
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.top-left {
+    padding: 10px;
+    justify-content: center;
+}
+
+
+.login {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.signup {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-grow: 1;
+}
+
+.center-content h1 {
+    margin-bottom: 50px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #303030;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 70%;
+}
+
+.files-mic {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.plus {
+    padding: 10px;
+}
+
+.input-box input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #303030;
+}
+
+.mic {
+    padding: 10px;
+}
