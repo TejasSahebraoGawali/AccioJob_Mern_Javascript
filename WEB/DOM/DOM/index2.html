@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+
+<body>
+    <button id="actionbtn">Hover On</button>
+
+    <script>
+        const actionbtn = document.getElementById("actionbtn");
+
+        actionbtn.addEventListener("click", () => console.log("Button Click"));
+        actionbtn.addEventListener("mouseover", () => console.log("Mouse Entered"));
+        actionbtn.addEventListener("mouseout", () => console.log("Mouse Left"));
+    </script>
+</body>
+
+</html>

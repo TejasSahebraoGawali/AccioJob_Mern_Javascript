@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Hadling and Event Objet</title>
+</head>
+
+<body>
+    <!-- Event Hadling and Event Objet -->
+
+    <button id="btn1">Click me</button>
+</body>
+
+<script>
+    let btn1 = document.querySelector("#btn1");
+
+    btn1.onclick = () => {
+        console.log("btn1 was clicked")
+        let a = 25;
+        a++;
+        console.log(a);
+    };
+</script>
+
+</html>

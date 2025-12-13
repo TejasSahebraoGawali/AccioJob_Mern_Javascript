@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Hadling by Event Listeners</title>
+</head>
+
+<body>
+    <!-- Event Hadling by Event Listeners -->
+    <button id="btn1">Click me</button>
+</body>
+
+<script>
+    let btn1 = document.querySelector("#btn1");
+
+    btn1.addEventListener("click", () => {
+        console.log("Button 1 was clicked");
+    });
+
+    btn1.addEventListener("click", () => {
+        console.log("Button 1 was clicked for triggering handler 2");
+    });
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 200px 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #box {
+            height: 170px;
+            width: 200px;
+            background-color: rgb(224, 234, 234);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        #btn {
+            padding: 10px;
+            background-color: #026ec1;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h2>Simple Add to Cart</h2>
+
+        <button id="btn">Add to Cart</button>
+        <p id="msg">Move Away</p>
+    </div>
+
+
+    <script>
+
+        const btn = document.getElementById("btn");
+        const msg = document.getElementById("msg");
+
+        btn.addEventListener("click", () => {
+            msg.textContent = "Item added!";
+            console.log("Item added!");
+        });
+
+        btn.addEventListener("mouseover", () => {
+            msg.textContent = "Ready to add item...";
+            console.log("Ready to add item...");
+        });
+
+        btn.addEventListener("mouseout", () => {
+            msg.textContent = "You moved away";
+            console.log("You moved away");
+        });
+
+    </script>
+</body>
+
+</html>

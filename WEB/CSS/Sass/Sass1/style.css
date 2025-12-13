@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: antiquewhite;
+}
+
+button {
+  background-color: rgb(109, 109, 147);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+/*# sourceMappingURL=style.css.map */

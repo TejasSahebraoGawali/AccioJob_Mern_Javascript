@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    margin-left: 120px;
+}
+
+.dashbord {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: rgb(245, 243, 243);
+    width: 200px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.card h2 {
+    color: #2475fc;
+}
+
+.card p {
+    color: gray;
+    font-size: 15px;
+}

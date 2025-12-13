@@ -1,0 +1,53 @@
+body {
+    background-color: #f5f7fb;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #e9ebf0;
+    width: 200px;
+    height: 270px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#selected {
+    scale : 1.05;
+    border: 2px solid #026ec1;
+}
+
+.card:hover {
+    scale : 1.05;
+    border: 2px solid #026ec1;
+}
+
+.price {
+    color: blueviolet;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #026ec1;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+p {
+    padding: 0;
+}

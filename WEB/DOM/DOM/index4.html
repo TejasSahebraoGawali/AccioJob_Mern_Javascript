@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+    <style>
+        #card {
+            height: 170px;
+            width: 200px;
+            background-color: rgb(227, 230, 232);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px ;
+        }
+
+        #num {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #add, #add2 {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="card">
+        <p id="num">5</p>
+        <button id="add">Add 1</button>
+        <button id="add2">Add 2</button>
+    </div>
+
+
+
+    <script>
+        document.getElementById("add").addEventListener("click", () => {
+
+            const p = document.getElementById("num");
+            let value = Number(p.textContent);
+            value = value + 1;
+            p.textContent = value;
+        });
+
+        document.getElementById("add2").addEventListener("click", () => {
+
+            const p = document.getElementById("num");
+            let value = Number(p.textContent);
+            value = value + 2;
+            p.textContent = value;
+        });
+
+    </script>
+</body>
+
+</html>

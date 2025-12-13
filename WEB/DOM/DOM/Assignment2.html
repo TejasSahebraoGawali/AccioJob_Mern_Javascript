@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Counter</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: aliceblue;
+            font-family: sans-serif;
+        }
+
+        #card {
+            width: 320px;
+            height: 200px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 18px;
+            box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            margin-top: 200px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            width: 50px;
+            font-size: 20px;
+        }
+
+        #count {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        #inc-btn {
+            background-color: blueviolet;
+            color: white;
+        }
+
+        #reset-btn {
+            width: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="card">
+        <h2>Minimal Counter</h2>
+        <p id="count">0</p>
+        <div>
+            <button id="dec-btn">-</button>
+            <button id="inc-btn">+</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        document.getElementById("inc-btn").addEventListener("click", () => {
+            let value = Number(document.getElementById("count").textContent);
+            value = value + 1;
+            document.getElementById("count").innerText = value;
+        });
+
+        document.getElementById("dec-btn").addEventListener("click", () => {
+            let value = Number(document.getElementById("count").textContent);
+            if (value != 0) {
+                value = value - 1;
+                document.getElementById("count").innerText = value;
+            }
+        });
+
+        document.getElementById("reset-btn").addEventListener("click", () => {
+            let value = Number(document.getElementById("count").textContent);
+            value = 0;
+            document.getElementById("count").innerText = value;
+        });
+
+    </script>
+</body>
+
+</html>

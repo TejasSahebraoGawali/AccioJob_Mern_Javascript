@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to cart</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            height: 160px;
+            width: 250px;
+            background-color: rgb(201, 208, 214);
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #btn {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100px;
+            background-color: rgb(60, 104, 249);
+            color: white;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Simple Add to Cart</h2>
+        <button type="submit" id="btn">Add to Cart</button>
+        <p id="msg">Move Away</p>
+    </div>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const msg = document.getElementById("msg");
+
+        btn.addEventListener("click", () => {
+            msg.textContent = "Item Added!";
+            console.log("Item Added!");
+        });
+
+        btn.addEventListener("mouseover", () => {
+            msg.textContent = "Ready to add item...";
+            console.log("Ready to add item...")
+        });
+
+        btn.addEventListener("mouseout", () => {
+            msg.textContent = "You moved away";
+            console.log("You moved away")
+        });
+    </script>
+</body>
+
+</html>

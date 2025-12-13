@@ -1,0 +1,17 @@
+$primary-color : rgb(109, 109, 147);
+$heading-font : sans-serif;
+$base-font-size : 16px;
+
+body {
+    font-family: $heading-font;
+    font-size: $base-font-size;
+    background-color: antiquewhite;
+}
+
+button {
+    background-color: $primary-color;
+    color: white;
+    border : none;
+    padding: 10px 20px;
+    border-radius: 6px;
+}

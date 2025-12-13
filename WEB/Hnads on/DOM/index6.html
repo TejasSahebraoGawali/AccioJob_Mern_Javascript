@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Element</title>
+
+    <style>
+        #box {
+            height: 200px;
+            width: 100px;
+            background-color: dodgerblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        This is a div
+
+        <ul>
+            <li>tejas</li>
+            <li>ganesh</li>
+            <li>Sachin</li>
+        </ul>
+    </div>
+
+    <script>
+        // let newBtn = document.createElement("button");
+
+        // newBtn.innerText = "Click me!";
+        // console.log(newBtn);
+
+        // let list = document.querySelector("div");
+
+        // list.append(newBtn);
+        // list.prepend(newBtn);
+        // list.after(newBtn);
+        // list.before(newBtn);
+
+
+        let newHeading = document.createElement("h1");
+        newHeading.innerHTML = "<i>Hi, I am new!</i>";
+
+        document.querySelector("body").prepend(newHeading);
+
+        // document.querySelector("div").remove();
+        // document.querySelector("h1").remove();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- <h2 id="heading">Hello JavaScript!</h2> -->
+
+    <h2>Hello JavaScript</h2>
+
+    <div class="box">First div</div>
+    <div class="box">Second div</div>
+    <div class="box">Third div</div>
+
+    <script>
+        // let heading = document.getElementById("heading");
+        // heading.innerText = heading.innerText + (" from Tejas Gawali!!")     
+
+        let divs = document.querySelectorAll(".box");
+
+        // divs[0].innerText = "new Uniqe Value 1";
+        // divs[1].innerText = "new Uniqe Value 2";
+        // divs[2].innerText = "new Uniqe Value 3";
+
+        let n = 1;
+        for (div of divs) {
+            div.innerText = `New unique value ${n}`;
+            n++;
+        }
+
+    </script>
+</body>
+
+</html>

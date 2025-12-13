@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Debug This UI</title>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #eef1f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #productCard {
+            width: 320px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 18px;
+            box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #prodImage {
+            width: 300px;
+            height: 250px;
+            border-radius: 14px;
+            transition: 0.3s ease;
+        }
+
+        #title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        #ratingBox {
+            font-size: 22px;
+            color: #facc15;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        #cartCount {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        #addBtn {
+            width: 100%;
+            background: #4f46e5;
+            color: white;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        #addBtn:hover {
+            background: #4338ca;
+        }
+
+        #heartIcon {
+            font-size: 30px;
+            color: #bbb;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="productCard">
+        <h1 id="title"></h1>
+        <img id="prodImage" src="./img (6).jpg" alt="Premium Chocolate">
+
+        <div id="ratingBox">★★★★★</div>
+
+        <div id="cartCount">0</div>
+
+        <button id="addBtn">Add to Cart</button>
+
+        <div id="heartIcon">♡</div>
+    </div>
+
+    <script>
+        // Image hover
+        document.getElementById("prodImage").addEventListener("mouseover", function () {
+            prodImage.style.transform = "scale(1.05)";
+        });
+
+        document.getElementById("prodImage").addEventListener("mouseout", function () {
+            document.getElementById("prodImage").style.transform = "scale(1)";
+        });
+
+        // Add to cart
+        document.getElementById("addBtn").addEventListener("click", function () {
+            let count = Number(document.getElementById("cartCount").textContent);
+            count = count + 1;
+            document.getElementById("cartCount").innerText = count;
+
+            document.getElementById("productCard").style.background = "#fff6ce";
+            document.getElementById("title").textContent = "Premium Chocolate";
+        });
+
+        // Wishlist
+        document.getElementById("heartIcon").addEventListener("click", function () {
+            heartIcon.style.color = "red";
+        });
+    </script>
+
+</body>
+
+</html>

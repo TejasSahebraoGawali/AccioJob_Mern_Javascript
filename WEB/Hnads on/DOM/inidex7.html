@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .para {
+            height: 100px;
+            width: 100px;
+            background-color: beige;
+            color: dodgerblue;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .pegion {
+            color: green;
+        }
+    </style>
+</head>
+
+<p class="para">This is a para</p>
+
+<body>
+
+    <script>
+        let newBtn = document.createElement("button");
+        newBtn.innerText = "Click me";
+
+        document.querySelector("body").prepend(newBtn);
+
+
+        newBtn.style.backgroundColor = "red";
+        newBtn.style.color = "white";
+        newBtn.style.padding = "10px";
+        newBtn.style.border = "none";
+        newBtn.style.fontSize = "20px";
+
+
+        let newCls = document.querySelector("p");
+        // newCls.setAttribute("class", "pegion");
+
+        newCls.classList.add("pegion");
+
+    </script>
+</body>
+
+</html>

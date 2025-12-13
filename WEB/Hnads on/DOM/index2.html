@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #card {
+            height: 200px;
+            width: 250px;
+            background-color: rgb(188, 186, 184);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-family: sans-serif;
+        }
+
+        #num {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #add1,
+        #add2,
+        #reset {
+            margin: 10px;
+            padding: 10px;
+            width: 80px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(54, 152, 238, 0.871);
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="card">
+        <p id="num">0</p>
+        <div>
+            <button id="add1">Add 1</button>
+            <button id="add2">Add 2</button>
+        </div>
+
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+
+        document.getElementById("add1").addEventListener("click", () => {
+            const p = document.getElementById("num");
+            let value = Number(p.textContent);
+            value += 1;
+            p.textContent = value;
+        });
+
+        document.getElementById("add2").addEventListener("click", () => {
+            const p = document.getElementById("num");
+            let value = Number(p.textContent);
+            value += 2;
+            p.textContent = value;
+        });
+
+        document.getElementById("reset").addEventListener("click", () => {
+            const p = document.getElementById("num");
+            let value = Number(p.textContent);
+            value = 0;
+            p.textContent = value;
+        });
+
+    </script>
+</body>
+
+</html>
