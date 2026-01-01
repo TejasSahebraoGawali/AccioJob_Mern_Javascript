@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- STEPPER -->
+        <div class="stepper">
+            <div class="step active">
+                <div class="circle"></div>
+                <div>Personal Details</div>
+            </div>
+
+            <div class="step">
+                <div class="circle"></div>
+                <div>Educational Details</div>
+            </div>
+
+            <div class="step">
+                <div class="circle"></div>
+                <div>Skills</div>
+            </div>
+
+            <div class="step">
+                <div class="circle"></div>
+                <div>Projects</div>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="form-area">
+
+            <!-- PERSONAL -->
+            <form class="form-section active">
+                <h3>Personal Details</h3>
+                <input id="name" placeholder="Full Name" required>
+                <input id="email" type="email" placeholder="Email" required>
+                <input id="phone" placeholder="Phone Number" required>
+                <button type="button" onclick="nextStep()">Save & Next</button>
+            </form>
+
+            <!-- EDUCATION -->
+            <form class="form-section">
+                <h3>Educational Details</h3>
+                <input id="college" placeholder="College Name" required>
+                <input id="degree" placeholder="Degree" required>
+                <input id="year" placeholder="Passing Year" required>
+                <button type="button" onclick="nextStep()">Save & Next</button>
+            </form>
+
+            <!-- SKILLS -->
+            <form class="form-section">
+                <h3>Skills</h3>
+                <input id="skills" placeholder="Skills (comma separated)" required>
+                <button type="button" onclick="nextStep()">Save & Next</button>
+            </form>
+
+            <!-- PROJECTS -->
+            <form class="form-section">
+                <h3>Projects</h3>
+                <input id="projectTitle" placeholder="Project Title" required>
+                <textarea id="projectDesc" placeholder="Project Description"></textarea>
+                <button type="button" onclick="showPreview()">Finish</button>
+            </form>
+
+            <!-- PREVIEW -->
+            <div class="form-section">
+                <h3>Preview</h3>
+                <div class="preview-box" id="preview"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
