@@ -1,0 +1,552 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+:root {
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --accent: #6c63ff;
+    --accent-2: #4b49c8;
+    --muted: #6b7280;
+    /* alternate palette (user-provided) */
+    --p1: #222831;
+    --p2: #222831;
+    --p3: #948979;
+    --p4: #DFD0B8;
+    --text: #081229;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* OLD CONTAINER STYLES - NOT USED (app now uses .notin-app) */
+.container {
+    display: none;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-top: 4px
+}
+
+.add {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    flex-direction: column;
+}
+
+.add-task {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+
+#addtask {
+    flex: 1;
+    min-height: 56px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #eef2ff;
+    resize: vertical;
+    font-size: 1rem;
+    transition: box-shadow 160ms ease, border-color 160ms ease;
+    background: transparent;
+}
+
+#addtask:focus {
+    outline: none;
+    box-shadow: 0 8px 30px rgba(76, 67, 211, 0.08);
+    border-color: var(--accent-2)
+}
+
+#add-btn {
+    background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.head {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    align-items: center
+}
+
+.head-obj {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    color: var(--muted);
+    font-weight: 600;
+    transition: transform 140ms ease, background 140ms ease, color 140ms ease;
+}
+
+.head-obj:hover {
+    transform: translateY(-2px)
+}
+
+.head-obj.active {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(76, 67, 211, 0.12)
+}
+
+.task-area {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden
+}
+
+.tasks {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: auto;
+    padding: 6px
+}
+
+.tasks.active-tasks {
+    min-width: 0
+}
+
+.tasks.completed-tasks {
+    min-width: 260px;
+    max-width: 360px
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(250, 250, 255, 0.9);
+    border: 1px solid rgba(230, 235, 255, 0.7);
+    transition: transform 220ms cubic-bezier(.2, .9, .2, 1), opacity 220ms ease;
+}
+
+.task-item.enter {
+    transform: translateY(-8px) scale(0.995);
+    opacity: 0
+}
+
+.task-item.enter.show {
+    transform: translateY(0) scale(1);
+    opacity: 1
+}
+
+.task-item.removing {
+    transform: scale(0.98);
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border-width: 0
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #081229
+}
+
+.task-item.completed .task-text {
+    color: var(--muted);
+    text-decoration: none;
+    opacity: 0.95
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.tick {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    cursor: pointer
+}
+
+.tick svg {
+    display: block;
+    width: 14px;
+    height: 14px;
+    opacity: 0
+}
+
+.task-item.completed .tick {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border: none
+}
+
+.task-item.completed .tick svg {
+    opacity: 1;
+    filter: drop-shadow(0 6px 12px rgba(76, 67, 211, 0.12))
+}
+
+/* .task-item.completed .task-text {
+    color: var(--muted);
+    text-decoration: line-through;
+    opacity: 0.8
+} */
+
+.delete-btn {
+    background: transparent;
+    border: 1px solid #ffd7d7;
+    color: #c53030;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 14px
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 14px
+}
+
+/* custom scrollbar (simple) */
+.task-list::-webkit-scrollbar {
+    width: 8px
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: #e6e9ef;
+    border-radius: 8px
+}
+
+.notin-app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
+}
+
+/* Toggle this class on the root .notin-app to apply the alternate palette */
+.notin-app.theme-alt {
+    /* dark aesthetic using user palette */
+    --bg: var(--p1);
+    /* dark background */
+    --card: var(--p4);
+    /* light card surface */
+    --accent: var(--p3);
+    --accent-2: var(--p2);
+    --muted: rgba(255, 255, 255, 0.75);
+    --text: rgba(255, 255, 255, 0.95);
+}
+
+.sidebar {
+    width: 220px;
+    padding: 28px 18px;
+    border-right: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--p1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--p4)
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.nav-item {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, var(--p3), var(--p2));
+    color: var(--p4)
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px;
+    background: transparent
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--p4)
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.75);
+    margin: 2px 0 0 0
+}
+
+.counts {
+    color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    gap: 12px;
+    font-size: 13px
+}
+
+.composer {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start
+}
+
+/* composer textarea */
+.composer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+#addtitle {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    font-size: 14px;
+    color: var(--text)
+}
+
+#addtask {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    font-size: 15px;
+    min-height: 48px;
+    max-height: 240px;
+    resize: none;
+    overflow: auto;
+    color: var(--text)
+}
+
+#addtask:focus,
+#addtitle:focus {
+    box-shadow: 0 6px 18px rgba(76, 67, 211, 0.06);
+    outline: none
+}
+
+.composer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 180px
+}
+
+#adddue {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    font-size: 13px;
+    color: var(--text)
+}
+
+#add-btn {
+    background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 44px
+}
+
+.list-section {
+    background: transparent;
+    display: block;
+    overflow: auto;
+    padding: 6px;
+    min-height: 200px
+}
+
+.task-card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.08)
+}
+
+.task-left {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start
+}
+
+.tick {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    cursor: pointer;
+    margin-top: 6px
+}
+
+.tick svg {
+    width: 12px;
+    height: 12px;
+    display: block;
+    opacity: 0
+}
+
+.task-card.completed .tick {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border: none
+}
+
+.task-card.completed .tick svg {
+    opacity: 1;
+    filter: drop-shadow(0 6px 12px rgba(76, 67, 211, 0.12))
+}
+
+.task-text {
+    font-size: 15px;
+    color: var(--p1);
+    white-space: pre-wrap;
+    word-break: break-word
+}
+
+.task-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: var(--p1)
+}
+
+.task-meta {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+    display: flex;
+    gap: 12px
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 8px
+}
+
+.action-btn:hover {
+    background: rgba(15, 23, 42, 0.04)
+}
+
+.edit-btn {
+    color: var(--accent-2);
+    font-weight: 600
+}
+
+.delete-btn {
+    background: linear-gradient(180deg, #ff7b7b, #ff5a5a);
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.delete-btn:hover {
+    transform: translateY(-1px)
+}
+
+.task-text {
+    font-size: 15px;
+    color: #081229;
+    white-space: pre-wrap;
+    word-break: break-word
+}
+
+/* small screens */
+@media (max-width:800px) {
+    .sidebar {
+        display: none
+    }
+
+    .main {
+        padding: 18px
+    }
+}

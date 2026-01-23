@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="container">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" required>
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" pattern="[a-z0-9]{6,20}" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="continer">
+        <h2>My to-do list</h2>
+        <div class="add">
+            <label for="addtask">Create new Task</label>
+            <div class="add-task">
+                <textarea name="addtask" id="addtask" rows="2" placeholder="Add New Task"></textarea>
+                <button id="add-btn">Add</button>
+            </div>
+        </div>
+        <div class="head">
+            <p class="head-obj active" data-filter="all">All (0)</p>
+            <p class="head-obj" data-filter="pending">Pending (0)</p>
+            <p class="head-obj" data-filter="completed">Completed (0)</p>
+        </div>
+
+        <div class="task-list" id="taskList" aria-live="polite">
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

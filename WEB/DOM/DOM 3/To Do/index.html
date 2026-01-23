@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notin‑style To‑Do</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="notin-app theme-alt">
+        <aside class="sidebar">
+            <div class="brand">Notin</div>
+            <nav class="nav">
+                <button class="nav-item active" data-section="all">All</button>
+                <button class="nav-item" data-section="today">Today</button>
+                <button class="nav-item" data-section="planned">Planned</button>
+                <button class="nav-item" data-section="completed">Completed</button>
+            </nav>
+            <div class="sidebar-footer">Local • Offline</div>
+        </aside>
+
+        <div class="main">
+            <header class="main-header">
+                <div>
+                    <h1 id="app-title">Notin — Tasks</h1>
+                    <p class="subtitle">Minimal, focused, and fast.</p>
+                </div>
+                <div class="counts">
+                    <span id="countAll">All (0)</span>
+                    <span id="countPending">Pending (0)</span>
+                    <span id="countCompleted">Completed (0)</span>
+                </div>
+            </header>
+
+            <section class="composer">
+                <div class="composer-left">
+                    <input id="addtitle" placeholder="Task title (short)" autocomplete="off">
+                    <textarea id="addtask" rows="2" placeholder="Task description. Press Enter to add (Shift+Enter for newline)"></textarea>
+                </div>
+                <div class="composer-right">
+                    <label for="adddue" class="visually-hidden">Due date</label>
+                    <input id="adddue" type="datetime-local">
+                    <button id="add-btn">New</button>
+                </div>
+            </section>
+
+            <section class="list-section" id="listSection">
+                <!-- tasks render here -->
+            </section>
+
+        </div>
+    </div>
+
+    <script src="new.js"></script>
+</body>
+
+</html>

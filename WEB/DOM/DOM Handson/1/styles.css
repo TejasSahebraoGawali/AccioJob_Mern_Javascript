@@ -1,0 +1,37 @@
+/*  your css code here. If applicable */
+body {
+	margin : 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.heading {
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	text-align : center;
+}
+
+.code-container {
+	display : flex;
+	gap : 10px;
+	justify-content : center;
+	margin : 50px
+}
+
+.code {
+	height : 150px;
+	width : 100px;
+	border-radius : 10px;
+	font-size : 70px;
+	text-align : center;
+	font-weight : 5px;
+}
+
+
+
+
+
+
+
+
+
