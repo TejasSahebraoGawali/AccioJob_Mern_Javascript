@@ -1,0 +1,62 @@
+/*  your css code here. If applicable */
+body {
+	margin : 0;
+	padding : 0;
+	width : 100vw;
+    font-family:sans-serif;
+}
+
+.main {
+	display : grid;
+	grid-template-columns : repeat(3, 1fr);
+    place-self: center;
+    gap: 50px;
+}
+
+.card {
+	height : 250px;
+	width : 180px;
+	background-color : #f1c2c2;
+    border: 10px solid #ccc;
+    border-radius: 10px;
+    color: white;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+p {
+    font-size: 0.75em;
+    margin: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    /* flex: 1; */
+    margin-top: 40px;
+    padding: 10px;
+    height: 146px;
+}
+
+.date {
+    text-align: right;
+    padding: 10px;
+}
+
+.txt {
+    margin-top: 10px;
+}
+
+.html {
+    background-color: #aeadaed1;
+    width: 40px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 2px;
+    position: fixed;
+    top : 305px;
+}
