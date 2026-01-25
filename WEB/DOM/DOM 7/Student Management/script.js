@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
     let app = {
         students: [
@@ -14,14 +14,63 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         ],
 
+        initialize() {
+            this.registerEvents();
+        },
+
+        registerEvents() {
+            let formElement = document.getElementById("new-student-form");
+            formElement.addEventListener("submit", (event) => {
+                event.preventDefault();
+                const form = event.target;
+                const data = new FormData(form);
+                const newStudent = {
+                    name: data.get("name"),
+                    age: data.get("age"),
+                    gender: data.get("gender")
+                }
+                this.addStudents(newStudent);
+            });
+        },
+
+        addStudents(student) {
+            this.students.push(student);
+            this.renderStudents();
+        },
+
         renderStudents() {
             const containerList = document.getElementById("list-container");
 
-            const list = document.createElement(ul);
+            const list = document.createElement("ul");
 
-            for(let student of this.students) {
-                
+            const headers = document.createElement("li");
+            list.append(headers);
+
+            ["Name", "Age", "Gender"].forEach(item => {
+                let lable = document.createElement("span");
+                lable.textContent = item;
+                headers.append(lable);
+            });
+
+            for (let student of this.students) {
+                let listItem = document.createElement("li");
+                let nameElement = document.createElement("span");
+                nameElement.textContent = student.name;
+
+                let ageElement = document.createElement("span");
+                ageElement.textContent = student.age;
+
+                let genderElement = document.createElement("span");
+                genderElement.textContent = student.gender;
+
+
+                listItem.append(nameElement, ageElement, genderElement);
+                list.append(listItem);
             }
+            containerList.replaceChildren(list);
         }
     }
+
+    app.initialize();
+    app.renderStudents();
 });

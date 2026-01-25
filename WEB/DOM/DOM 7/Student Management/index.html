@@ -5,12 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management</title>
+    <style>
+        #new-student-form {
+            input {
+                padding: 5px;
+                border-radius: 5px;
+            }
+
+            button {
+                padding: 5px 12px;
+                border-radius: 5px;
+            }
+        }
+
+
+        #list-container {
+            ul {
+                list-style: none;
+
+                li {
+                    display: flex;
+                    gap: 16px;
+                }
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-    <section id="list-container">Tejas</section>
-
+    <form id="new-student-form">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="age" placeholder="Age">
+        <input type="text" name="gender" placeholder="Gender">
+        <button type="submit">Add</button>
+    </form>
+    <section id="list-container"></section>
     <script src="script.js"></script>
 </body>
 
