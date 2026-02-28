@@ -9,7 +9,7 @@
 
 
 
-// according to aget print statement
+// according to age print statement
 
 // let age=120;
 // if(age<0){
@@ -38,7 +38,7 @@
 
 
 // let n = 5;
-// if ((n / 2) !=Math.floor(n / 2)) {
+// if ((n / 2) != Math.floor(n / 2)) {
 //     console.log("half is not an integer")
 // }
 // else {
@@ -70,7 +70,7 @@
 
 
 
-// print gread according to marks 
+// print grade according to marks 
 
 // let marks=40;
 // if(marks>=80){

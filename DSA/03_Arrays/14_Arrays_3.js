@@ -21,7 +21,9 @@ console.log({ arr });
 // ################ CONCAT ################
 
 let arr2 = [-3, -4, -10, -8];
-console.log(arr.concat(arr2));    //H.W. ====> How to concatenate multiple arrays
+let arr3 = [-3, -4, -10, -8];
+console.log(arr.concat(arr2));    
+console.log(arr.concat(arr2,arr3));    //H.W. ====> How to concatenate multiple arrays
 
 
 // TYPES OF LOOPS FOR ARRAYS
@@ -127,7 +129,6 @@ function oddIndexElement(arr) {
         console.log(arr[i]);
     }
 }
-
 oddIndexElement(arr);
 
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module">
+        import React from "https://esm.sh/react";
+        import { createRoot } from "https://esm.sh/react-dom/client";
+
+        window.React = React;
+        window.createRoot = createRoot;
+        const section = React.createElement("section", {
+            className: "container",
+            children: [
+                React.createElement("span", {
+                    children: "Hello",
+                }),
+                React.createElement("span", {
+                    children: "World",
+                    className: "title",
+                    style: {
+                        color: "royalblue",
+                        backgroundColor: "rosybrown",
+                    },
+                    onClick: () => {
+                        console.log("clicked");
+                    },
+                }),
+            ],
+        });
+        console.log(section);
+        const root = document.getElementById("root");
+        createRoot(root).render(section);
+    </script>
+</body>
+
+</html>

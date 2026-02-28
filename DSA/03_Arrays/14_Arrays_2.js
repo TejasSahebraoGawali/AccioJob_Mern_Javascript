@@ -14,7 +14,7 @@ console.log(arr);
 arr = [1, 5, 6, 2, 1, 10];
 arr[1] = 7;
 console.log({ arr });
- 
+
 /* ================== Methods in Arrays ================== */
 /* Insertion in Arrays */
 
@@ -31,13 +31,16 @@ console.log(arr);
 
 
 // Deletions in Array
-
+let arr2 = [1, 2, 3, 4, 5];
 // #1 Deletion at end
-arr.pop(); // find out what it will return
+// arr2.pop(); // find out what it will return
+console.log("arr.pop() will return : ", arr2.pop());
+console.log(arr2);
 
 // #2 Deletion at begining
-arr.shift(); // find out what it will return
-
+// arr2.shift(); // find out what it will return
+console.log("arr.shift() will return : ", arr2.shift());
+console.log(arr2);
 
 // Searching in Array
 // write a function to return the index of a target element function findIndex (arr, targetValue)
@@ -54,7 +57,7 @@ arr.shift(); // find out what it will return
 // Inbuilt method to find the first index 
 
 console.log("index of 10 in Array", arr.indexOf(10));  //returns index if 10 is present 
-console.log("index of 10 in Array", arr.indexOf(15));  // returns -1 if 15 doesn't exists
+console.log("index of 151 in Array", arr.indexOf(151));  // returns -1 if 151 doesn't exists
 
 
 // inbuilt method to find the last index of an element 

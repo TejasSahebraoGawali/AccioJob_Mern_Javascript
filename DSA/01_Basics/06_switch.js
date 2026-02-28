@@ -84,7 +84,7 @@
 // console.log(day);
 
 
-// print greading system using switch  case 
+// print grading system using switch case
 
 // let marks = 30;
 // switch (true) {

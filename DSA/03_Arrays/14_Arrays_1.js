@@ -86,5 +86,5 @@ FizzBuzz(arr1);
 
 let arr2 = ["Dev", "Ram", "Sita"];
 
-arr2[0] = "Laxman";
+arr2[5] = "Laxman";
 console.log(arr2);

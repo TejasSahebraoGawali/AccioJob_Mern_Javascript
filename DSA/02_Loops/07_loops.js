@@ -1,35 +1,13 @@
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-// console.log("hii");
-
-
-
 /*
-
 Issuse is that repeating code
--to much work
+- to much work
 - human error 
--unable to count number of repeattion
--problem of redability
--to much work to update
-to solve this issue we have loops 
--while
--for
-this are loops we have
-
+- unable to count number of repeattion
+- problem of redability
+- to much work to update
+- to solve this issue we have loops 
+- while and for loops
 */
-
 
 
 // while loop
@@ -77,7 +55,7 @@ let number = 2;
 // for(let i=0;i<50;i+=3){
 //      console.log(i);
 // }
-//tim complexity O(50)
+//time complexity O(50)
 
 
 // print the square of each number from 20 to 35
@@ -92,7 +70,6 @@ let number = 2;
 // for(i;i<=n;i++){
 //      console.log(i,"suqare is ",i*i);
 //     i++;
-
 // }
 // time coplexity - O(16)-wrong
 
@@ -112,7 +89,7 @@ let number = 2;
 // time complexity O(10)
 
 
-//sum of  first 100 number
+//sum of first 100 number
 
 // let sumOfNumbers=0;
 // let n=100
