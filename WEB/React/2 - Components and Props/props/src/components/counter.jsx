@@ -22,6 +22,7 @@ export default function Counter() {
         setCount((prev) => prev + 1); // prev =2 => 2+ 1=3
         setCount((prev) => prev + 1); // prev = 3 => 3+1 =4
         setCount((prev) => prev + 1); // prev = 4 => 4+1 =5
+        
         // multiple set statements get batched
         // setCount(count + 1); //=> 1+1 =2
         // setCount(count + 1); //=> 1+1 =2
